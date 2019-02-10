@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>International Air Traffic Data</h1>
+<hr>
+<table class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Year</th>
+    <th>air_hrs</th>
+    <th>air_kms</th>
+    <th>pass_carried</th>
+    <th>pass_kms</th>
+    <th>available_seats</th>
+    <th>pass_load</th>
+    <th>cargo</th>
+  </tr>
+  {% for article in article2 %}
+  <tr>
+    <td>{{article.id}}</td>
+    <td>{{article.year}}</td>
+    <td>{{article.air_hrs}}</td>
+    <td>{{article.air_kms}}</td>
+    <td>{{article.pass_carried}}</td>
+    <td>{{article.pass_kms}}</td>
+    <td>{{article.available_seats}}</td>
+    <td>{{article.pass_load}}</td>
+    <td>{{article.cargo}}</td>
+
+  </tr>
+    {% endfor %}
+</table>
+{% endblock %}
